@@ -48,4 +48,5 @@ const checkConnection = async() => {
         
  }
  setInterval(() => isOnline &&  checkConnection(), 3000)
+ button.addEventListener('click', checkConnection)
 
