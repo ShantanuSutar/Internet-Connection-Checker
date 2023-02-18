@@ -14,17 +14,24 @@ body {
   display: flex;
   padding: 1rem;
   border-radius: 5px;
+  visibility: hidden;
   border: 5px solid #eaeaea;
   border-top-color: #d62828;
   background-color: #fff;
   position: absolute;
   left: 50%;
-  top: 0;
+  top: -25%;
   transform: translateX(-50%);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  transition: all 0.5s ease-in-out; */
+  transition: all 0.5s ease-in-out;
 }
+
+.show {
+  visibility: visible;
+  top: 0;
+}
+
 .icon {
   color: #ff3333;
   font-size: 3rem;

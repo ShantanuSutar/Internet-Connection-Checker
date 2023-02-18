@@ -1,4 +1,5 @@
 'use strict';
+const popup = document.querySelector('.popup');
 let isOnline = true;
 const checkConnection = async() => {
      try{
@@ -8,7 +9,14 @@ const checkConnection = async() => {
      }catch(error){
         isOnline = false;
      }
-     console.log(isOnline)
+     handlePopup(isOnline)
+ }
+
+ const handlePopup = (isOnline) => {
+   if(isOnline === true){
+      return popup.classList.remove('show');
+   }
+   popup.classList.add('show');
  }
 
 setInterval(checkConnection, 3000) 
