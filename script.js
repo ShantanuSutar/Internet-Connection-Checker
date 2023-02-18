@@ -27,7 +27,7 @@ const checkConnection = async() => {
       about.innerHTML = "Your device is successfully connected to the internet";
       popup.classList.add("popup-green");
       icon.style.color = "lightgreen";
-      return popup.classList.remove('show')
+      return setTimeout(() => { popup.classList.remove('show')}, 2000)
      }
 
    icon.classList.remove = "bi-wifi"
