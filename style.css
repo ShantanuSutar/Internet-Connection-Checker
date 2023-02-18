@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: lightskyblue;
+}
+
+.popup {
+  min-width: 375px;
+  max-width: 35rem;
+  display: flex;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 5px solid #eaeaea;
+  border-top-color: #d62828;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  transition: all 0.5s ease-in-out; */
+}
