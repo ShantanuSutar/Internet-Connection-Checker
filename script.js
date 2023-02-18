@@ -1,6 +1,6 @@
 'use strict';
 const popup = document.querySelector('.popup');
-let isOnline = true;
+let isOnline = true, timer = 11, intervalId;
 const checkConnection = async() => {
      try{
         const response = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -9,6 +9,8 @@ const checkConnection = async() => {
      }catch(error){
         isOnline = false;
      }
+     timer = 11;
+     clearInterval(intervalId)
      handlePopup(isOnline)
  }
 
@@ -17,6 +19,14 @@ const checkConnection = async() => {
       return popup.classList.remove('show');
    }
    popup.classList.add('show');
+   intervalId = setInterval(() => {
+      timer--;
+      if(timer === 0) {
+          checkConnection();
+      }
+      popup.querySelector(".about b").textContent = timer;
+       }, 1000);
+      
  }
 
-setInterval(checkConnection, 3000) 
+ setInterval(() => isOnline &&  checkConnection(), 3000)
