@@ -27,6 +27,10 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+.popup-green {
+  border-top-color: #74e655;
+}
+
 .show {
   visibility: visible;
   top: 0;
