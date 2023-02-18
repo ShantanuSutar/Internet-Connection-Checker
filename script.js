@@ -21,8 +21,8 @@ const checkConnection = async() => {
 
  const handlePopup = (isOnline) => {
     if(isOnline === true){
-      icon.classList.remove = "bi-wifi-off"
-      icon.classList.add = "bi-wifi";
+      icon.classList.remove("bi-wifi-off")
+      icon.classList.add("bi-wifi");
       title.textContent = "Connection Restored :)"
       about.innerHTML = "Your device is successfully connected to the internet";
       popup.classList.add("popup-green");
@@ -30,9 +30,9 @@ const checkConnection = async() => {
       button.classList.add("btn-grey")
       return setTimeout(() => { popup.classList.remove('show')}, 2000)
      }
-
-   icon.classList.remove = "bi-wifi"
-   icon.classList.add = "bi-wifi-off";
+     icon.classList.remove("bi-wifi");
+   icon.classList.add("bi-wifi-off")
+   
    icon.style.color = "#ff3333";
    popup.classList.add('show');
    popup.classList.remove("popup-green");
