@@ -27,6 +27,7 @@ const checkConnection = async() => {
       about.innerHTML = "Your device is successfully connected to the internet";
       popup.classList.add("popup-green");
       icon.style.color = "lightgreen";
+      button.classList.add("btn-grey")
       return setTimeout(() => { popup.classList.remove('show')}, 2000)
      }
 
@@ -36,6 +37,7 @@ const checkConnection = async() => {
    popup.classList.add('show');
    popup.classList.remove("popup-green");
    title.textContent = "Connection Lost :(";
+   button.classList.remove('btn-grey')
    about.innerHTML = "Your network is unavailable. We will try to reconnect you in <b>10</b> seconds";
 
     intervalId = setInterval(() => {
