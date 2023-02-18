@@ -40,3 +40,18 @@ body {
 .popup .desc .about {
   font-size: 17px;
 }
+
+.btn {
+  margin-top: 12px;
+  padding: 0.5rem 1rem;
+  font-size: 17px;
+  border-radius: 5px;
+  border: none;
+  background-color: #d5cfcf;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #74e655;
+}
